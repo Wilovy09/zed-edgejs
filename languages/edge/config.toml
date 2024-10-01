@@ -1,0 +1,11 @@
+name = "edge"
+grammar = "edge"
+path_suffixes = ["edge"]
+autoclose_before = ";:.,=}])>"
+line_comments = ["{{-- ", " --}}"]
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+]
+

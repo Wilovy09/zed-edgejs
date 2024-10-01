@@ -1,0 +1,24 @@
+<nav class="flex flex-col gap-12 bg-sidebarDefault w-full h-full p-6">
+  <div class="w-full flex flex-row gap-4 items-center">
+    @svg('heroicons:cog-solid', { class: 'w-12 h-12 text-white bg-primaryDefault rounded-md' })
+    <h1 class="text-xl font-semibold">AIMS</h1>
+  </div>
+
+  <ul class="flex flex-col gap-4 text-gray-600 w-full h-full">
+    @let(routes = [
+      { url: route('patients'), label: 'Pacientes', icon: 'heroicons:users-solid' },
+      { url: '/habitaciones', label: 'Habitaciones', icon: 'heroicons:building-office-2-solid' },
+      { url: '/accounts', label: 'Cuentas', icon: 'heroicons:user-circle-solid' },
+      { url: '/logout', label: 'Cerrar Sesión', icon: 'heroicons:arrow-right-on-rectangle-20-solid' },
+    ])
+
+    @each(route in routes)
+      <li class="w-full h-11 {{ startsWith(request.url(), route.url) ? 'bg-primaryDefault font-bold hover:translate-x-2 transition-transform' : 'bg-sidebarDefault' }} rounded-xl">
+        <a href="{{ route.url }}" class="flex flex-row gap-3 w-full h-full px-4 items-center {{ startsWith(request.url(), route.url) ? 'text-white' : 'hover:text-gray-900 hover:translate-x-2 transition-transform' }}">
+          @svg(route.icon, { class: startsWith(request.url(), route.url) ? "w-6 h-6" : "w-5 h-5" })
+          {{ route.label }}
+        </a>
+      </li>
+    @endeach
+  </ul>
+</nav>

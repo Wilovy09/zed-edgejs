@@ -1,0 +1,12 @@
+id = "edge"
+name = "edge"
+version = "0.0.1"
+schema_version = 1
+authors = ["Wilovy09 <srwilovy09@gmail.com>"]
+description = "Add support to EdgeJS (by AdonisJS)"
+repository = "https://github.com/Wilovy09/edgejs"
+
+[grammars.edge]
+repository = "https://github.com/Brayan-724/tree-sitter-edge"
+commit = "39a8c0b79fc30e93f43505e7554b156a062354b6"
+
