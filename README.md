@@ -1,5 +1,9 @@
 # EdgeJS (By AdonisJS) Zed support
 
+<div align="center">
+  <img src="./public/edge_zed.png" alt="EdgeJS Zed support" />
+</div>
+
 ## 🚀 Installation
 
 > [!NOTE]
